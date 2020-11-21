@@ -22,7 +22,7 @@ import {
   
 } from 'react-native/Libraries/NewAppScreen';
 
-const AlertMsg ='Seguro que quiere  eliminar esta tarea?';
+const AlertMsg ='Seguro que quiere  eliminar este libro';
 const AlrtCncl='Ha cancelado el proceso de eliminacion'
 
 import { openDatabase } from 'react-native-sqlite-storage';
@@ -70,10 +70,6 @@ class ViewAll extends PureComponent {
   }
 
 
-  
-  
-  
-
   render() {
     return (
       <View>
@@ -84,7 +80,8 @@ class ViewAll extends PureComponent {
             renderItem={({item}) => (
                 <View style={{ backgroundColor: 'white', padding: 20 }}>
                     <Text>Id: {item.task_id}</Text>
-                    <Text>Tarea: {item.task}</Text>
+                    <Text>Book: {item.task}</Text>
+                    <Text>Description: {item.description}</Text>
                     <Button 
                     onPress={()=>
                         Alert.alert('Aviso',AlertMsg,[

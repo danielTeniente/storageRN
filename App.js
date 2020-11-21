@@ -28,21 +28,21 @@ import {
   ReloadInstructions,
   
 } from 'react-native/Libraries/NewAppScreen';
-import Add from './Add';
-import ViewAll from './ViewAll';
+import Add from './src/components/Add';
+import ViewAll from './src/components/ViewAll';
 
 function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        SQLiteProject
+        Lista de libros
       </Text>
       <Button
-        title="Añadir Tarea"
+        title="Añadir Libro"
         onPress={() => navigation.navigate('Add')}
       /> 
       <Button
-        title="Ver Tareas"
+        title="Ver libros"
         onPress={() => navigation.navigate('ViewAll')}
       />
     </View>
